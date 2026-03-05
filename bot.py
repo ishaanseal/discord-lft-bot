@@ -16,7 +16,7 @@ async def on_message(message):
     if message.author.bot:
         return
 
-    if message.content.lower() == "-lft":
+    if message.content.lower().startswith("-lft"):
         await message.create_thread(
             name=f"LFT - {message.author.name}",
             auto_archive_duration=60
